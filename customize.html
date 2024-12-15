@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize Your Tab Manager</title>
+
+    <link rel="stylesheet" href="customize.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="customize.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="tabsContainer"></div>
+    </div>
+
+    <div class="add-tab" id="addTab">
+      <button class="close-btn" onclick="toggleAddTab()">×</button>
+      <input
+        type="text"
+        id="newTabInput"
+        placeholder="Add your own tab by inserting your link here..."
+      />
+      <input
+        type="number"
+        id="memoryUsageInput"
+        placeholder="Memory Usage (MB)"
+        min="0"
+        step="1"
+      />
+      <div class="screenshot-upload">
+        <input
+          type="file"
+          id="screenshotInput"
+          accept="image/*"
+          onchange="previewScreenshot(event)"
+        />
+        <img
+          id="screenshotPreview"
+          class="screenshot-preview"
+          src=""
+          alt="Screenshot Preview"
+          style="display: none"
+        />
+      </div>
+      <button onclick="addNewTab()">Add Tab</button>
+    </div>
+    <button class="open-add-tab-btn" onclick="toggleAddTab()">+</button>
+
+    <button class="print-btn" onclick="printCatalog()">
+      <span class="material-icons">print</span>
+    </button>
+  </body>
+</html>

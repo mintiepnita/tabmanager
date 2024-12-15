@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Manager</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Information Overlay Modal -->
+    <div id="infoOverlay" class="info-overlay">
+      <div class="info-content">
+        <button class="close-info-btn" onclick="toggleInfoOverlay()">×</button>
+        <h2>"Untitled" (Portrait of My Opened Tabs)</h2>
+        <p>
+          is a digital collection by Mintie, currently displayed on this Tabs
+          Manager website, a personal archive that reflects the common
+          phenomenon of tab hoarding. In today’s fast-paced digital world, we
+          all find ourselves accumulating dozens (or even hundreds) of open
+          tabs—each one representing a task, interest, or curiosity that we may
+          or may not return to. This collection captures the reality of digital
+          life: the constant juggling of information, entertainment, and
+          productivity, often with no clear end in sight. As we navigate the
+          internet, our browsers become cluttered with tabs we leave open,
+          waiting for the right moment to be dealt with. <br /><br />
+          This collection is part of the Web to Print class at California
+          College of the Arts (CCA) for Fall 2024.
+        </p>
+      </div>
+    </div>
+
+    <!-- Information Button at the bottom-left -->
+    <button class="info-btn" onclick="toggleInfoOverlay()">i</button>
+
+    <!-- Customize Button -->
+    <button class="customize-btn" onclick="openCustomizeTab()">
+      <span class="material-icons">edit</span>
+      <!-- Pencil icon -->
+    </button>
+
+    <div class="container">
+      <div id="tabsContainer"></div>
+    </div>
+
+    <div class="add-tab" id="addTab">
+      <button class="close-btn" onclick="toggleAddTab()">×</button>
+      <input
+        type="text"
+        id="newTabInput"
+        placeholder="Add your own tab by inserting your link here..."
+      />
+      <input
+        type="number"
+        id="memoryUsageInput"
+        placeholder="Memory Usage (MB)"
+        min="0"
+        step="1"
+      />
+      <div class="screenshot-upload">
+        <input
+          type="file"
+          id="screenshotInput"
+          accept="image/*"
+          onchange="previewScreenshot(event)"
+        />
+        <img
+          id="screenshotPreview"
+          class="screenshot-preview"
+          src=""
+          alt="Screenshot Preview"
+          style="display: none"
+        />
+      </div>
+      <button onclick="addNewTab()">Add Tab</button>
+    </div>
+    <button class="open-add-tab-btn" onclick="toggleAddTab()">+</button>
+
+    <div class="minimal-screen" id="minimalScreen">
+      <h1>Sometimes, less is more...</h1>
+      <button class="restart-btn" onclick="restartExperience()">
+        Start Over
+      </button>
+    </div>
+
+    <button class="print-btn" onclick="printCatalog()">
+      <span class="material-icons">print</span>
+    </button>
+  </body>
+</html>
