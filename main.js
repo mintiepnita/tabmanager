@@ -596,7 +596,7 @@ async function printCatalog() {
                 <h1>Tab Catalog</h1>
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <div class="bottom-content">
-                    <h2>"Untitled" <br /><br />(Portrait of My Opened Tabs)</h2>
+                    <h2>"Untitled" <br /><br />(Portrait of My Opened Tabs, 2024)</h2>
                     <p>A digital collection exploring the phenomenon of tab hoarding</p>
                     <p>Print Edition: ${printEdition}</p>
                 </div>
